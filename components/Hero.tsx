@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Cormorant_Garamond } from "next/font/google";
+import MobileCarousel from "./MobileCarousel";
 
 const headline = Cormorant_Garamond({ subsets: ["latin"], weight: "600" });
 
@@ -62,12 +63,8 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Mobile: single image */}
-        <div className="block sm:hidden">
-          <div className="relative aspect-[4/3] rounded-sm overflow-hidden ring-1 ring-[#c9b97a]">
-            <Image src="/main.jpg" alt="The Paper Bag Deli" fill className="object-cover object-center" priority />
-          </div>
-        </div>
+        {/* Mobile: auto-sliding carousel */}
+        <MobileCarousel />
 
         {/* Desktop: 2x2 grid */}
         <div className="hidden sm:grid grid-cols-2 gap-6">
