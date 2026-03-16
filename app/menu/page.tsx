@@ -151,8 +151,8 @@ export default function MenuPage() {
   return (
     <>
       {/* Cursive tagline */}
-      <div className="max-w-6xl mx-auto px-6 pt-14 pb-4 text-center">
-        <p className={`${cursive.className} text-4xl text-[#1a1a1a]`}>
+      <div className="max-w-6xl mx-auto px-6 pt-8 pb-3 text-center">
+        <p className={`${cursive.className} text-3xl text-[#1a1a1a]`}>
           Changing Lives One Sandwich at a Time
         </p>
       </div>
