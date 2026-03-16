@@ -8,7 +8,7 @@ export default function HomePage() {
     <>
       <Hero />
 
-      <Section title="Visit Us" subtitle="We have three convenient locations across Portland.">
+      <Section title="Visit Us" subtitle="We have three convenient locations across Portland." className="!pt-8 sm:!pt-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <LocationCard
             name="Downtown Portland"

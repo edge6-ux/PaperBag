@@ -33,8 +33,10 @@ export default function Hero() {
           </div>
 
           <h1 className={`${headline.className} tracking-tight mb-5`}>
-            <span className="block text-5xl whitespace-nowrap text-[#1a1a1a]">Fresh, Handcrafted, Legendary</span>
-            <span className="block text-6xl text-[#1a1a1a]">Sandwiches.</span>
+            {/* Mobile: stacked, Desktop: single line */}
+            <span className="block sm:hidden text-4xl text-[#1a1a1a]">Fresh, Handcrafted,<br />Legendary</span>
+            <span className="hidden sm:block text-5xl whitespace-nowrap text-[#1a1a1a]">Fresh, Handcrafted, Legendary</span>
+            <span className="block text-5xl sm:text-6xl text-[#1a1a1a]">Sandwiches.</span>
           </h1>
 
           {/* Rule under headline */}
@@ -60,8 +62,15 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Image Collage */}
-        <div className="grid grid-cols-2 gap-6">
+        {/* Mobile: single image */}
+        <div className="block sm:hidden">
+          <div className="relative aspect-[4/3] rounded-sm overflow-hidden ring-1 ring-[#c9b97a]">
+            <Image src="/main.jpg" alt="The Paper Bag Deli" fill className="object-cover object-center" priority />
+          </div>
+        </div>
+
+        {/* Desktop: 2x2 grid */}
+        <div className="hidden sm:grid grid-cols-2 gap-6">
           <div className="relative aspect-[4/3] rounded-sm overflow-hidden ring-1 ring-[#c9b97a]">
             <Image src="/kim.jpg" alt="Kimchi sandwich" fill className="object-cover object-center" />
           </div>
