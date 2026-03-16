@@ -123,6 +123,8 @@ export default function Navbar() {
                 <a
                   key={loc.name}
                   href={loc.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="border border-[#c9b97a] rounded-xl px-5 py-4 hover:shadow-md transition cursor-pointer bg-white flex justify-between items-center"
                 >
                   <div>
