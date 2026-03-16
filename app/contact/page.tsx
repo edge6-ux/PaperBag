@@ -1,7 +1,10 @@
 'use client'
 
 import { useState } from 'react'
+import { Dancing_Script } from 'next/font/google'
 import Section from '@/components/Section'
+
+const cursive = Dancing_Script({ subsets: ['latin'], weight: '600' })
 
 const locations = [
   {
@@ -56,8 +59,13 @@ export default function ContactPage() {
   }
 
   return (
+    <>
+      <div className="max-w-6xl mx-auto px-6 pt-14 pb-0 text-center">
+        <p className={`${cursive.className} text-4xl text-[#1a1a1a]`}>
+          Contact Us
+        </p>
+      </div>
     <Section
-      title="Contact Us"
       subtitle="Questions, catering inquiries, or just want to say hello — we'd love to hear from you."
     >
       <div className="flex flex-col lg:flex-row gap-12 max-w-4xl">
@@ -162,5 +170,6 @@ export default function ContactPage() {
 
       </div>
     </Section>
+    </>
   )
 }
