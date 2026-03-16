@@ -163,7 +163,7 @@ export default function MenuPage() {
           <Image src="/sammo5.jpg" alt="The Paper Bag Deli" fill className="object-cover object-center" priority />
         </div>
         <div className="relative w-full rounded-md overflow-hidden ring-1 ring-neutral-200" style={{ height: '380px' }}>
-          <Image src="/sammo2.jpg" alt="Menu highlight" fill className="object-cover object-center" />
+          <Image src="/sammo6.jpg" alt="Menu highlight" fill className="object-cover object-center" />
         </div>
         <div className="relative w-full rounded-md overflow-hidden ring-1 ring-neutral-200" style={{ height: '380px' }}>
           <Image src="/sammo3.jpg" alt="Menu highlight" fill className="object-cover object-center" />
