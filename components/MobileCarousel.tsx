@@ -1,28 +1,48 @@
 'use client'
 
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const images = [
-  { src: '/sammo5.jpg', alt: 'Sandwich' },
+  { src: '/sammo4.webp', alt: 'Sandwich' },
   { src: '/sammo.jpg', alt: 'Sandwich board' },
   { src: '/bacon.jpg', alt: 'Breakfast sandwich' },
   { src: '/drizzle.jpg', alt: 'Drizzled sandwich' },
+  { src: '/sammo5.jpg', alt: 'Sandwich' },
 ]
 
 export default function MobileCarousel() {
   const [current, setCurrent] = useState(0)
+  const touchStartX = useRef<number | null>(null)
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length)
-    }, 3500)
+    }, 6000)
     return () => clearInterval(timer)
   }, [])
 
+  const prev = () => setCurrent((c) => (c - 1 + images.length) % images.length)
+  const next = () => setCurrent((c) => (c + 1) % images.length)
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX
+  }
+
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return
+    const delta = touchStartX.current - e.changedTouches[0].clientX
+    if (Math.abs(delta) > 40) delta > 0 ? next() : prev()
+    touchStartX.current = null
+  }
+
   return (
     <div className="block sm:hidden">
-      <div className="relative aspect-[4/3] rounded-sm overflow-hidden ring-1 ring-[#c9b97a]">
+      <div
+        className="relative aspect-[4/3] rounded-sm overflow-hidden ring-1 ring-[#c9b97a]"
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
+      >
         {images.map((img, i) => (
           <div
             key={img.src}
