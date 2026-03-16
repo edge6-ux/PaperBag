@@ -28,7 +28,7 @@ export default function HomePage() {
             address="209 NW 75th St"
             city="Gainesville, FL 32607"
             phone="(352) 451-4972"
-            image="/Tower.jpg"
+            image="/tower.jpg"
             hours={[
               { days: 'Mon – Fri', time: '6am – 3pm' },
               { days: 'Saturday', time: '10am – 3pm' },

@@ -153,7 +153,7 @@ export default function MenuPage() {
       {/* Cursive tagline */}
       <div className="max-w-6xl mx-auto px-6 pt-14 pb-4 text-center">
         <p className={`${cursive.className} text-4xl text-[#1a1a1a]`}>
-          Serving quality sandwiches, wine, and beer
+          Changing Lives One Sandwich at a Time
         </p>
       </div>
 

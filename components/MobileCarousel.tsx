@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 const images = [
-  { src: '/kim.jpg', alt: 'Kimchi sandwich' },
+  { src: '/sammo4.webp', alt: 'Sandwich' },
   { src: '/sammo.jpg', alt: 'Sandwich board' },
   { src: '/bacon.jpg', alt: 'Breakfast sandwich' },
   { src: '/drizzle.jpg', alt: 'Drizzled sandwich' },
