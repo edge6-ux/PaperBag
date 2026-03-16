@@ -29,7 +29,7 @@ export default function Hero() {
           {/* Newspaper masthead line */}
           <div className="flex items-center gap-3 justify-center mb-5">
             <div className="h-px bg-[#3a3128] w-16" />
-            <span className="text-[10px] uppercase tracking-[0.25em] text-[#6b5a3e]">Gainesville, FL — Est. 2009</span>
+            <span className="text-[10px] uppercase tracking-[0.25em] text-[#6b5a3e] whitespace-nowrap">Gainesville, FL — Est. 2009</span>
             <div className="h-px bg-[#3a3128] w-16" />
           </div>
 
