@@ -157,8 +157,8 @@ export default function MenuPage() {
         </p>
       </div>
 
-      {/* Three-image grid */}
-      <div className="max-w-6xl mx-auto px-6 pt-4 pb-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
+      {/* Three-image grid — hidden on mobile */}
+      <div className="hidden sm:grid max-w-6xl mx-auto px-6 pt-4 pb-10 grid-cols-3 gap-4">
         <div className="relative w-full rounded-md overflow-hidden ring-1 ring-neutral-200" style={{ height: '380px' }}>
           <Image src="/main.jpg" alt="The Paper Bag Deli" fill className="object-cover object-center" priority />
         </div>
@@ -170,8 +170,8 @@ export default function MenuPage() {
         </div>
       </div>
 
-      {/* Divider */}
-      <div className="max-w-6xl mx-auto px-6">
+      {/* Divider — hidden on mobile */}
+      <div className="hidden sm:block max-w-6xl mx-auto px-6">
         <div className="border-t border-neutral-200" />
       </div>
 
