@@ -33,10 +33,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-[#2C2C2C] mb-3">Hours</h4>
-            <p className="text-sm text-gray-500">Mon – Fri: 7am – 4pm</p>
-            <p className="text-sm text-gray-500">Saturday: 8am – 3pm</p>
-            <p className="text-sm text-gray-500">Sunday: Closed</p>
+            <h4 className="font-semibold text-[#2C2C2C] mb-3">Contact</h4>
+            <p className="text-sm text-gray-500">Downtown: (352) 554-6109</p>
+            <p className="text-sm text-gray-500">Tower Rd: (352) 451-4972</p>
+            <p className="text-sm text-gray-500">Magnolia Park: (352) 554-4662</p>
           </div>
         </div>
 

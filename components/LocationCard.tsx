@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 interface HourRow {
   days: string
   time: string
@@ -9,14 +11,21 @@ interface LocationCardProps {
   city: string
   phone: string
   hours: HourRow[]
+  image?: string
 }
 
-export default function LocationCard({ name, address, city, phone, hours }: LocationCardProps) {
+export default function LocationCard({ name, address, city, phone, hours, image }: LocationCardProps) {
   return (
     <div className="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm">
-      {/* Placeholder map */}
-      <div className="w-full h-48 bg-gray-100 flex items-center justify-center">
-        <span className="text-gray-300 text-sm">Map Coming Soon</span>
+      {/* Image or placeholder */}
+      <div className="relative w-full h-48 bg-gray-100">
+        {image ? (
+          <Image src={image} alt={name} fill className="object-cover object-center" />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center">
+            <span className="text-gray-300 text-sm">Map Coming Soon</span>
+          </div>
+        )}
       </div>
       <div className="p-6">
         <h3 className="text-lg font-bold text-[#2C2C2C] mb-1">{name}</h3>
