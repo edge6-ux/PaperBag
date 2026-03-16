@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 const locations = [
   {
     name: 'Downtown',
@@ -30,12 +28,14 @@ export default function OrderPage() {
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full max-w-3xl">
         {locations.map((loc) => (
-          <Link key={loc.name} href={loc.href}>
-            <div className="border border-[#c9b97a] rounded-xl p-6 hover:shadow-md transition cursor-pointer bg-white">
-              <h2 className="text-lg font-bold text-[#1a1a1a] mb-1">{loc.name}</h2>
-              <p className="text-sm text-[#6b5a3e]">{loc.address}</p>
-            </div>
-          </Link>
+          <a
+            key={loc.name}
+            href={loc.href}
+            className="border border-[#c9b97a] rounded-xl p-6 hover:shadow-md transition cursor-pointer bg-white block"
+          >
+            <h2 className="text-lg font-bold text-[#1a1a1a] mb-1">{loc.name}</h2>
+            <p className="text-sm text-[#6b5a3e]">{loc.address}</p>
+          </a>
         ))}
       </div>
     </div>
