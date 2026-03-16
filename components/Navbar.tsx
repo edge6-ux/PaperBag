@@ -44,15 +44,15 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav Links */}
-          <div className="hidden md:flex items-center gap-10 text-[13px] font-medium tracking-wide uppercase text-[#3a3128]">
+          <div className="hidden md:flex items-center gap-8 text-[13px] font-medium tracking-wide uppercase text-[#3a3128]">
             {links.map((link) => (
-              <a key={link.href} href={link.href} className="hover:text-black transition-colors">
+              <a key={link.href} href={link.href} className="hover:text-black transition-colors hover:underline underline-offset-4 decoration-[1.5px]">
                 {link.label}
               </a>
             ))}
             <button
               onClick={() => setOrderOpen(true)}
-              className="bg-black text-white px-4 py-2 rounded-md hover:bg-neutral-800 transition text-[12px]"
+              className="bg-black text-white px-5 py-2.5 rounded-md hover:bg-neutral-800 transition-all duration-200 shadow-sm hover:shadow-md text-[12px]"
             >
               Order Online
             </button>

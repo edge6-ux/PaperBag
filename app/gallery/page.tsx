@@ -71,14 +71,14 @@ export default function GalleryPage() {
         {images.map((img, i) => (
           <div
             key={i}
-            className="relative w-full overflow-hidden rounded-xl shadow-md"
+            className="relative w-full overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-transparent hover:border-[#c9b97a]"
             style={{ height: '280px' }}
           >
             <Image
               src={img.src}
               alt={img.alt}
               fill
-              className="object-cover object-center"
+              className="object-cover object-center transition-transform duration-300 hover:scale-[1.03]"
               sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
             />
           </div>
