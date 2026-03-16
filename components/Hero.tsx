@@ -56,7 +56,7 @@ export default function Hero() {
             </a>
             <a
               className="px-7 py-2.5 border border-[#1a1a1a] text-[#1a1a1a] text-sm font-medium tracking-wide rounded hover:bg-[#e8dfc4] transition-colors"
-              href="/about#gallery"
+              href="/gallery"
             >
               Gallery
             </a>
