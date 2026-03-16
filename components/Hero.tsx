@@ -69,7 +69,7 @@ export default function Hero() {
         {/* Desktop: 2x2 grid */}
         <div className="hidden sm:grid grid-cols-2 gap-6">
           <div className="relative aspect-[4/3] rounded-sm overflow-hidden ring-1 ring-[#c9b97a]">
-            <Image src="/sammo4.webp" alt="Sandwich" fill className="object-cover object-center" />
+            <Image src="/sammo5.jpg" alt="Sandwich" fill className="object-cover object-center" />
           </div>
           <div className="relative aspect-[4/3] rounded-sm overflow-hidden ring-1 ring-[#c9b97a]">
             <Image src="/sammo.jpg" alt="Sandwich board" fill className="object-cover object-center" />
