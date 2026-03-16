@@ -25,8 +25,8 @@ const orderLocations = [
     href: '#',
   },
   {
-    name: 'Newberry',
-    address: 'Coming Soon',
+    name: 'Magnolia Parke',
+    address: '4780 NW 39th Ave',
     // TODO: Replace href with real online ordering URL for Newberry
     href: '#',
   },

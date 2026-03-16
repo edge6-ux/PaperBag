@@ -31,7 +31,7 @@ export default function LocationsPage() {
           ]}
         />
         <LocationCard
-          name="Magnolia Park"
+          name="Magnolia Parke"
           address="4780 NW 39th Ave"
           city="Gainesville, FL 32606"
           phone="(352) 554-4662"

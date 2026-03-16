@@ -36,7 +36,7 @@ export default function Footer() {
             <h4 className="font-semibold text-[#2C2C2C] mb-3">Contact</h4>
             <p className="text-sm text-gray-500">Downtown: (352) 554-6109</p>
             <p className="text-sm text-gray-500">Tower Rd: (352) 451-4972</p>
-            <p className="text-sm text-gray-500">Magnolia Park: (352) 554-4662</p>
+            <p className="text-sm text-gray-500">Magnolia Parke: (352) 554-4662</p>
           </div>
         </div>
 

@@ -4,20 +4,17 @@ const locations = [
   {
     name: 'Downtown',
     address: '11 SE 1st Ave, Gainesville, FL 32601',
-    // TODO: Replace href with real online ordering URL for Downtown
-    href: '#',
+    href: 'https://order.tbdine.com/pickup/48021/menu',
   },
   {
     name: 'Tower Road',
     address: '209 NW 75th St, Gainesville, FL 32607',
-    // TODO: Replace href with real online ordering URL for Tower Road
-    href: '#',
+    href: 'https://order.tbdine.com/pickup/54888/menu',
   },
   {
-    name: 'Newberry',
-    address: 'Coming Soon',
-    // TODO: Replace href with real online ordering URL for Newberry
-    href: '#',
+    name: 'Magnolia Parke',
+    address: '4780 NW 39th Ave, Gainesville, FL 32606',
+    href: 'https://online.skytab.com/80c53ac65b4dd040393d5e9a4410400b/order-settings',
   },
 ]
 
