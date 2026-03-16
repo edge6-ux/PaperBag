@@ -175,7 +175,7 @@ export default function MenuPage() {
         <div className="border-t border-neutral-200" />
       </div>
 
-      <Section title="Take Out Menu" subtitle="Made fresh daily with Boar's Head meats and Gainesville flavor.">
+      <Section title="Take Out Menu" subtitle="Made fresh daily with Boar's Head meats and Gainesville flavor." className="!pt-6">
         <MenuSection category="Breakfast" items={breakfast} />
         <MenuSection category="Lunch" items={lunch} />
         <MenuSection category="Salads" items={salads} />
