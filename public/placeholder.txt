@@ -1,0 +1,2 @@
+Place static assets here (images, fonts, icons, etc.).
+Files in this folder are served at the root URL — e.g., /public/logo.png is accessible at http://localhost:3001/logo.png

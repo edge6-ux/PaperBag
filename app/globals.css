@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #f5eed8;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 27px,
+      rgba(139, 109, 56, 0.07) 27px,
+      rgba(139, 109, 56, 0.07) 28px
+    );
+    @apply text-[#1a1a1a] leading-relaxed;
+  }
+
+  h1, h2, h3, h4 {
+    @apply tracking-tight leading-tight;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold;
+  }
+
+  h3 {
+    @apply text-lg font-semibold;
+  }
+
+  p {
+    @apply text-[#3a3128] leading-7;
+  }
+}
