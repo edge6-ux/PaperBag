@@ -23,7 +23,7 @@ export default function LocationCard({ name, address, city, phone, hours, image 
           <Image src={image} alt={name} fill className="object-cover object-center" />
         ) : (
           <div className="w-full h-full flex items-center justify-center">
-            <span className="text-gray-300 text-sm">Map Coming Soon</span>
+            <span className="text-gray-400 text-sm font-medium tracking-wide uppercase">Coming Soon</span>
           </div>
         )}
       </div>

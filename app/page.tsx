@@ -8,8 +8,8 @@ export default function HomePage() {
     <>
       <Hero />
 
-      <Section title="Visit Us" subtitle="We have three convenient locations across Gainesville." className="!pt-8 sm:!pt-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <Section title="Visit Us" subtitle="We have two convenient locations across Gainesville." className="!pt-8 sm:!pt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <LocationCard
             name="Downtown"
             address="11 SE 1st Ave"
@@ -29,18 +29,6 @@ export default function HomePage() {
             city="Gainesville, FL 32607"
             phone="(352) 451-4972"
             image="/tower.jpg"
-            hours={[
-              { days: 'Mon – Fri', time: '6am – 3pm' },
-              { days: 'Saturday', time: '10am – 3pm' },
-              { days: 'Sunday', time: 'Closed' },
-            ]}
-          />
-          <LocationCard
-            name="Magnolia Park"
-            address="4780 NW 39th Ave"
-            city="Gainesville, FL 32606"
-            phone="(352) 554-4662"
-            image="/mag.jpg"
             hours={[
               { days: 'Mon – Fri', time: '6am – 3pm' },
               { days: 'Saturday', time: '10am – 3pm' },
