@@ -3,22 +3,22 @@ import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer className="bg-white text-[#1a1a1a] mt-16 border-t border-[#e8dfc4]">
-      <div className="max-w-6xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 items-start">
+    <footer className="bg-white text-[#1a1a1a] mt-8 border-t border-[#e8dfc4]">
+      <div className="max-w-6xl mx-auto px-6 py-7">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
 
           {/* Brand */}
           <div>
             <p className="text-sm text-[#3a3128] tracking-widest uppercase mb-1">The Paper Bag Deli</p>
             <p className="text-sm text-[#6b5a3e] mb-4">Fresh, handcrafted, legendary.</p>
             <div className="flex justify-start pl-4">
-              <Image src="/logopb.webp" alt="The Paper Bag Deli" width={220} height={220} className="opacity-90" />
+              <Image src="/logo2.webp" alt="The Paper Bag Deli" width={220} height={220} className="opacity-90" />
             </div>
           </div>
 
           {/* Nav links */}
           <div>
-            <p className="text-[11px] uppercase tracking-[0.2em] text-[#c9b97a] font-bold mb-4">Explore</p>
+            <p className="text-[11px] uppercase tracking-[0.2em] text-[#5a4a35] font-bold mb-4">Explore</p>
             <ul className="flex flex-col gap-2">
               {[
                 { href: '/menu', label: 'Menu' },
@@ -38,7 +38,7 @@ export default function Footer() {
 
           {/* Locations */}
           <div>
-            <p className="text-[11px] uppercase tracking-[0.2em] text-[#c9b97a] font-bold mb-4">Locations</p>
+            <p className="text-[11px] uppercase tracking-[0.2em] text-[#5a4a35] font-bold mb-4">Locations</p>
             <div className="flex flex-col gap-4 text-sm text-[#6b5a3e]">
               <div>
                 <p className="text-[#1a1a1a] font-medium">Downtown</p>
@@ -61,7 +61,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-10 pt-6 border-t border-[#e8dfc4] flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div className="mt-6 pt-4 border-t border-[#e8dfc4] flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-xs text-[#6b5a3e]/60">
             &copy; {new Date().getFullYear()} The Paper Bag Deli. All rights reserved.
           </p>

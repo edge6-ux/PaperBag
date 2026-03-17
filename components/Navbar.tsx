@@ -40,12 +40,9 @@ export default function Navbar() {
 
           {/* Brand name as home link */}
           <Link href="/" className="flex items-center gap-2 text-[13px] font-medium tracking-widest uppercase text-[#3a3128] hover:text-black transition-colors">
-            <svg width="13" height="18" viewBox="0 0 13 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              {/* folded top flap — full width */}
-              <rect x="0" y="0" width="13" height="5" rx="0.5" />
-              {/* 1px natural gap = visible crease line */}
-              {/* bag body — narrower, centered under flap */}
-              <rect x="1" y="6" width="11" height="12" rx="0.5" />
+            <svg width="15" height="19" viewBox="0 0 15 19" fill="currentColor" fillRule="evenodd" aria-hidden="true">
+              {/* cheese slice — taller body with holes */}
+              <path d="M1 2 Q1 1 2 1 L13 1 Q14 1 14 2 L14 17 Q14 18 13 18 L2 18 Q1 18 1 17 Z M7 5.5 A2 2 0 1 0 3 5.5 A2 2 0 1 0 7 5.5 Z M12.5 9 A1.8 1.8 0 1 0 8.9 9 A1.8 1.8 0 1 0 12.5 9 Z M6 13.5 A1.4 1.4 0 1 0 3.2 13.5 A1.4 1.4 0 1 0 6 13.5 Z"/>
             </svg>
             The Paper Bag Deli
           </Link>

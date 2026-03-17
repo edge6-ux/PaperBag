@@ -8,7 +8,7 @@ export default function HomePage() {
     <div className="bg-honeycomb">
       <Hero />
 
-      <Section title="Visit Us" subtitle="We have two convenient locations across Gainesville." className="!pt-8 sm:!pt-16">
+      <Section title="Visit Us" subtitle="We have two convenient locations across Gainesville." className="!pt-2 sm:!pt-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <LocationCard
             name="Downtown"

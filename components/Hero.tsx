@@ -75,7 +75,7 @@ export default function Hero() {
             <Image src="/sammo.jpg" alt="Sandwich board" fill className="object-cover object-center" />
           </div>
           <div className="relative aspect-[4/3] rounded-sm overflow-hidden ring-1 ring-[#c9b97a]">
-            <Image src="/drizzle.jpg" alt="Drizzled sandwich" fill className="object-cover object-center" />
+            <Image src="/drizzle.jpg" alt="Drizzled sandwich" fill className="object-cover object-center scale-x-[-1]" />
           </div>
         </div>
 

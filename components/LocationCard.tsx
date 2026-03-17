@@ -18,7 +18,7 @@ export default function LocationCard({ name, address, city, phone, hours, image 
   return (
     <div className="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm">
       {/* Image or placeholder */}
-      <div className="relative w-full h-48 bg-gray-100">
+      <div className="relative w-full h-72 bg-gray-100">
         {image ? (
           <Image src={image} alt={name} fill className="object-cover object-center" />
         ) : (
