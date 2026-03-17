@@ -66,16 +66,13 @@ export default function Hero() {
         {/* Mobile: auto-sliding carousel */}
         <MobileCarousel />
 
-        {/* Desktop: 2x2 grid */}
-        <div className="hidden sm:grid grid-cols-2 gap-6">
+        {/* Desktop: 1x3 grid */}
+        <div className="hidden sm:grid grid-cols-3 gap-6">
           <div className="relative aspect-[4/3] rounded-sm overflow-hidden ring-1 ring-[#c9b97a]">
             <Image src="/sammo4.webp" alt="Sandwich" fill className="object-cover object-center" />
           </div>
           <div className="relative aspect-[4/3] rounded-sm overflow-hidden ring-1 ring-[#c9b97a]">
             <Image src="/sammo.jpg" alt="Sandwich board" fill className="object-cover object-center" />
-          </div>
-          <div className="relative aspect-[4/3] rounded-sm overflow-hidden ring-1 ring-[#c9b97a]">
-            <Image src="/bacon.jpg" alt="Breakfast sandwich" fill className="object-cover object-center" />
           </div>
           <div className="relative aspect-[4/3] rounded-sm overflow-hidden ring-1 ring-[#c9b97a]">
             <Image src="/drizzle.jpg" alt="Drizzled sandwich" fill className="object-cover object-center" />
