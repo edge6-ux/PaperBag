@@ -35,11 +35,18 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="w-full border-b border-[#c9b97a] bg-[#f5eed8]/95 backdrop-blur-sm sticky top-0 z-50">
+      <nav className="w-full border-b border-[#c9b97a] bg-[#fdf9f3]/95 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
 
           {/* Brand name as home link */}
-          <Link href="/" className="text-[13px] font-medium tracking-widest uppercase text-[#3a3128] hover:text-black transition-colors">
+          <Link href="/" className="flex items-center gap-2 text-[13px] font-medium tracking-widest uppercase text-[#3a3128] hover:text-black transition-colors">
+            <svg width="13" height="18" viewBox="0 0 13 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              {/* folded top flap — full width */}
+              <rect x="0" y="0" width="13" height="5" rx="0.5" />
+              {/* 1px natural gap = visible crease line */}
+              {/* bag body — narrower, centered under flap */}
+              <rect x="1" y="6" width="11" height="12" rx="0.5" />
+            </svg>
             The Paper Bag Deli
           </Link>
 
@@ -73,7 +80,7 @@ export default function Navbar() {
 
         {/* Mobile Dropdown */}
         {open && (
-          <div className="md:hidden border-t border-[#c9b97a] bg-[#f5eed8] px-6 py-4 flex flex-col gap-4">
+          <div className="md:hidden border-t border-[#c9b97a] bg-[#fdf9f3] px-6 py-4 flex flex-col gap-4">
             {links.map((link) => (
               <a
                 key={link.href}
@@ -101,7 +108,7 @@ export default function Navbar() {
           onClick={() => setOrderOpen(false)}
         >
           <div
-            className="bg-[#f5eed8] rounded-xl p-8 w-full max-w-md shadow-xl"
+            className="bg-[#fdf9f3] rounded-xl p-8 w-full max-w-md shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}

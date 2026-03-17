@@ -18,7 +18,7 @@ const locations = [
 
 export default function OrderPage() {
   return (
-    <div className="min-h-screen bg-[#f5eed8] flex flex-col items-center px-6 py-20">
+    <div className="min-h-screen bg-[#fdf9f3] flex flex-col items-center px-6 py-20">
       <h1 className="text-3xl sm:text-4xl font-bold text-[#1a1a1a] mb-3 text-center">
         Choose Your Location
       </h1>

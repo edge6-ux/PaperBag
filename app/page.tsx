@@ -5,7 +5,7 @@ import LocationCard from '@/components/LocationCard'
 
 export default function HomePage() {
   return (
-    <>
+    <div className="bg-honeycomb">
       <Hero />
 
       <Section title="Visit Us" subtitle="We have two convenient locations across Gainesville." className="!pt-8 sm:!pt-16">
@@ -46,7 +46,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section className="bg-gray-50">
+      <Section className="bg-pattern-dots">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-2xl font-bold text-[#2C2C2C] mb-4">Feeding a Crowd?</h2>
           <p className="text-gray-500 text-base leading-relaxed mb-6">
@@ -60,6 +60,6 @@ export default function HomePage() {
           </Link>
         </div>
       </Section>
-    </>
+    </div>
   )
 }

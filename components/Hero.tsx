@@ -14,7 +14,7 @@ export default function Hero() {
         <div className="flex justify-center mb-0">
           <Link href="/">
             <Image
-              src="/logopb.webp"
+              src="/logo2.webp"
               alt="The Paper Bag Deli logo"
               width={240}
               height={240}
@@ -49,7 +49,7 @@ export default function Hero() {
 
           <div className="flex justify-center gap-3">
             <a
-              className="px-7 py-2.5 bg-[#1a1a1a] text-[#f5eed8] text-sm font-medium tracking-wide rounded hover:bg-black transition-colors"
+              className="px-7 py-2.5 bg-[#1a1a1a] text-[#fdf9f3] text-sm font-medium tracking-wide rounded hover:bg-black transition-colors"
               href="/menu"
             >
               View Menu

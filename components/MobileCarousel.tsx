@@ -66,7 +66,7 @@ export default function MobileCarousel() {
               key={i}
               onClick={() => setCurrent(i)}
               className="w-1.5 h-1.5 rounded-full transition-all"
-              style={{ background: i === current ? '#f5eed8' : 'rgba(245,238,216,0.45)' }}
+              style={{ background: i === current ? '#fdf9f3' : 'rgba(245,238,216,0.45)' }}
               aria-label={`Go to slide ${i + 1}`}
             />
           ))}
