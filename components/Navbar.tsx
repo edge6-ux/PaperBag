@@ -52,7 +52,7 @@ export default function Navbar() {
       </div>
 
       <nav className="w-full border-b-2 border-[#111111] bg-[#111111] sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+        <div className="w-full pl-8 pr-0 py-3 flex items-center justify-between">
 
           {/* Brand */}
           <Link href="/" className="text-[#F7F2E4] hover:text-[#C41E3A] transition-colors" style={{ fontFamily: 'var(--font-playfair)', fontSize: '17px', fontWeight: 700, letterSpacing: '0.04em' }}>
@@ -60,7 +60,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav Links */}
-          <div className="hidden md:flex items-center gap-7" style={{ fontFamily: 'var(--font-oswald)', fontSize: '13px', letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 500 }}>
+          <div className="hidden md:flex items-center gap-7 pr-0" style={{ fontFamily: 'var(--font-oswald)', fontSize: '13px', letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 500 }}>
             {links.map((link) => (
               <a key={link.href} href={link.href} className="text-[#D4CCBC] hover:text-[#F7F2E4] transition-colors hover:underline underline-offset-4 decoration-[#C41E3A] decoration-2">
                 {link.label}
@@ -68,7 +68,7 @@ export default function Navbar() {
             ))}
             <button
               onClick={() => setOrderOpen(true)}
-              className="bg-[#C41E3A] text-[#F7F2E4] px-5 py-2 hover:bg-[#A01830] transition-all duration-200 text-[12px] tracking-widest uppercase font-bold"
+              className="bg-[#C41E3A] text-[#F7F2E4] pl-5 pr-8 py-[14px] hover:bg-[#A01830] transition-all duration-200 text-[12px] tracking-widest uppercase font-bold self-stretch flex items-center"
               style={{ fontFamily: 'var(--font-oswald)' }}
             >
               Order Online
