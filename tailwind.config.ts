@@ -9,8 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        accent: '#6B9B6B',
-        charcoal: '#2C2C2C',
+        red: { retro: '#C41E3A' },
+        ink: '#111111',
+        newsprint: '#F7F2E4',
+      },
+      fontFamily: {
+        playfair: ['var(--font-playfair)', 'Georgia', 'serif'],
+        oswald: ['var(--font-oswald)', 'Arial Narrow', 'sans-serif'],
       },
     },
   },

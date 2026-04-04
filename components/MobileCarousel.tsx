@@ -38,39 +38,46 @@ export default function MobileCarousel() {
 
   return (
     <div className="block sm:hidden">
-      <div
-        className="relative aspect-[4/3] rounded-sm overflow-hidden ring-1 ring-[#c9b97a]"
-        onTouchStart={onTouchStart}
-        onTouchEnd={onTouchEnd}
-      >
-        {images.map((img, i) => (
-          <div
-            key={img.src}
-            className="absolute inset-0 transition-opacity duration-700"
-            style={{ opacity: i === current ? 1 : 0 }}
-          >
-            <Image
-              src={img.src}
-              alt={img.alt}
-              fill
-              className="object-cover object-center"
-              priority={i === 0}
-            />
-          </div>
-        ))}
-
-        {/* Dot indicators */}
-        <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2 z-10">
-          {images.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              className="w-1.5 h-1.5 rounded-full transition-all"
-              style={{ background: i === current ? '#fdf9f3' : 'rgba(245,238,216,0.45)' }}
-              aria-label={`Go to slide ${i + 1}`}
-            />
+      {/* Polaroid-style wrapper */}
+      <div className="polaroid polaroid-center mx-2">
+        <div
+          className="relative aspect-[4/3] overflow-hidden"
+          onTouchStart={onTouchStart}
+          onTouchEnd={onTouchEnd}
+        >
+          {images.map((img, i) => (
+            <div
+              key={img.src}
+              className="absolute inset-0 transition-opacity duration-700"
+              style={{ opacity: i === current ? 1 : 0 }}
+            >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                className="object-cover object-center"
+                priority={i === 0}
+              />
+            </div>
           ))}
+
+          {/* Dot indicators */}
+          <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2 z-10">
+            {images.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrent(i)}
+                className="w-2 h-2 rounded-full transition-all"
+                style={{ background: i === current ? '#C41E3A' : 'rgba(247,242,228,0.55)' }}
+                aria-label={`Go to slide ${i + 1}`}
+              />
+            ))}
+          </div>
         </div>
+
+        <p style={{ fontFamily: 'var(--font-oswald)', fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#444', textAlign: 'center', paddingTop: '10px' }}>
+          {images[current].alt}
+        </p>
       </div>
     </div>
   )

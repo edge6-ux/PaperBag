@@ -35,28 +35,44 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="w-full border-b border-[#c9b97a] bg-[#fdf9f3]/95 backdrop-blur-sm sticky top-0 z-50">
+      {/* Top ticker tape */}
+      <div className="bg-[#C41E3A] overflow-hidden h-7 flex items-center">
+        <div className="flex ticker-track">
+          {[...Array(2)].map((_, rep) => (
+            <span key={rep} className="flex items-center gap-8 px-4" style={{ fontFamily: 'var(--font-oswald)', fontSize: '11px', letterSpacing: '0.15em', color: '#F7F2E4', textTransform: 'uppercase', fontWeight: 600 }}>
+              {['Fresh Cuts Daily', 'Gainesville FL', 'Est. 2022', 'Three Locations', 'Made From Scratch', 'Order Online Now', 'Fresh Cuts Daily', 'Gainesville FL', 'Est. 2022', 'Three Locations', 'Made From Scratch', 'Order Online Now'].map((item, i) => (
+                <span key={i} className="flex items-center gap-8">
+                  <span>{item}</span>
+                  <span style={{ color: '#fff', opacity: 0.4 }}>✦</span>
+                </span>
+              ))}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <nav className="w-full border-b-2 border-[#111111] bg-[#111111] sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
 
-          {/* Brand name as home link */}
-          <Link href="/" className="flex items-center gap-2 text-[13px] font-medium tracking-widest uppercase text-[#3a3128] hover:text-black transition-colors">
+          {/* Brand */}
+          <Link href="/" className="flex items-center gap-2 text-[#F7F2E4] hover:text-[#C41E3A] transition-colors" style={{ fontFamily: 'var(--font-oswald)', fontSize: '15px', letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 600 }}>
             <svg width="15" height="19" viewBox="0 0 15 19" fill="currentColor" fillRule="evenodd" aria-hidden="true">
-              {/* cheese slice — taller body with holes */}
               <path d="M1 2 Q1 1 2 1 L13 1 Q14 1 14 2 L14 17 Q14 18 13 18 L2 18 Q1 18 1 17 Z M7 5.5 A2 2 0 1 0 3 5.5 A2 2 0 1 0 7 5.5 Z M12.5 9 A1.8 1.8 0 1 0 8.9 9 A1.8 1.8 0 1 0 12.5 9 Z M6 13.5 A1.4 1.4 0 1 0 3.2 13.5 A1.4 1.4 0 1 0 6 13.5 Z"/>
             </svg>
             The Paper Bag Deli
           </Link>
 
           {/* Desktop Nav Links */}
-          <div className="hidden md:flex items-center gap-8 text-[13px] font-medium tracking-wide uppercase text-[#3a3128]">
+          <div className="hidden md:flex items-center gap-7" style={{ fontFamily: 'var(--font-oswald)', fontSize: '13px', letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 500 }}>
             {links.map((link) => (
-              <a key={link.href} href={link.href} className="hover:text-black transition-colors hover:underline underline-offset-4 decoration-[1.5px]">
+              <a key={link.href} href={link.href} className="text-[#D4CCBC] hover:text-[#F7F2E4] transition-colors hover:underline underline-offset-4 decoration-[#C41E3A] decoration-2">
                 {link.label}
               </a>
             ))}
             <button
               onClick={() => setOrderOpen(true)}
-              className="bg-black text-white px-5 py-2.5 rounded-md hover:bg-neutral-800 transition-all duration-200 shadow-sm hover:shadow-md text-[12px]"
+              className="bg-[#C41E3A] text-[#F7F2E4] px-5 py-2 hover:bg-[#A01830] transition-all duration-200 text-[12px] tracking-widest uppercase font-bold"
+              style={{ fontFamily: 'var(--font-oswald)' }}
             >
               Order Online
             </button>
@@ -68,21 +84,22 @@ export default function Navbar() {
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
-            <div className="w-6 h-px bg-[#3a3128]"></div>
-            <div className="w-6 h-px bg-[#3a3128]"></div>
-            <div className="w-6 h-px bg-[#3a3128]"></div>
+            <div className="w-6 h-[2px] bg-[#F7F2E4]"></div>
+            <div className="w-6 h-[2px] bg-[#F7F2E4]"></div>
+            <div className="w-6 h-[2px] bg-[#F7F2E4]"></div>
           </button>
 
         </div>
 
         {/* Mobile Dropdown */}
         {open && (
-          <div className="md:hidden border-t border-[#c9b97a] bg-[#fdf9f3] px-6 py-4 flex flex-col gap-4">
+          <div className="md:hidden border-t border-[#333] bg-[#1a1a1a] px-6 py-5 flex flex-col gap-5">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-[13px] font-medium tracking-wide uppercase text-[#3a3128] hover:text-black transition-colors"
+                className="text-[#D4CCBC] hover:text-[#F7F2E4] transition-colors"
+                style={{ fontFamily: 'var(--font-oswald)', fontSize: '14px', letterSpacing: '0.16em', textTransform: 'uppercase', fontWeight: 500 }}
                 onClick={() => setOpen(false)}
               >
                 {link.label}
@@ -90,7 +107,8 @@ export default function Navbar() {
             ))}
             <button
               onClick={() => { setOpen(false); setOrderOpen(true) }}
-              className="bg-black text-white px-4 py-2 rounded-md hover:bg-neutral-800 transition text-[13px] font-medium tracking-wide uppercase text-center"
+              className="bg-[#C41E3A] text-[#F7F2E4] px-4 py-3 hover:bg-[#A01830] transition text-center font-bold tracking-widest uppercase"
+              style={{ fontFamily: 'var(--font-oswald)', fontSize: '13px' }}
             >
               Order Online
             </button>
@@ -101,25 +119,29 @@ export default function Navbar() {
       {/* Order Online Modal */}
       {orderOpen && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 px-4"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 px-4"
           onClick={() => setOrderOpen(false)}
         >
           <div
-            className="bg-[#fdf9f3] rounded-xl p-8 w-full max-w-md shadow-xl"
+            className="bg-[#F7F2E4] p-8 w-full max-w-md shadow-2xl border-4 border-[#111]"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
-            <div className="flex items-center justify-between mb-2">
-              <h2 className="text-xl font-bold text-[#1a1a1a]">Choose Your Location</h2>
+            <div className="border-b-2 border-[#111] pb-3 mb-5 flex items-center justify-between">
+              <h2 style={{ fontFamily: 'var(--font-playfair)', fontSize: '22px', fontWeight: 800, color: '#111' }}>
+                Choose Your Location
+              </h2>
               <button
                 onClick={() => setOrderOpen(false)}
-                className="text-[#6b5a3e] hover:text-black transition text-lg leading-none"
+                className="text-[#111] hover:text-[#C41E3A] transition text-xl leading-none font-bold"
                 aria-label="Close"
               >
                 ✕
               </button>
             </div>
-            <p className="text-sm text-[#6b5a3e] mb-6">Select a location to start your order.</p>
+            <p className="text-sm text-[#444] mb-5" style={{ fontFamily: 'var(--font-oswald)', letterSpacing: '0.05em' }}>
+              Select a location to start your order.
+            </p>
 
             {/* Location Cards */}
             <div className="flex flex-col gap-3">
@@ -129,13 +151,13 @@ export default function Navbar() {
                   href={loc.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border border-[#c9b97a] rounded-xl px-5 py-4 hover:shadow-md transition cursor-pointer bg-white flex justify-between items-center"
+                  className="border-2 border-[#111] px-5 py-4 hover:bg-[#111] hover:text-[#F7F2E4] transition-all cursor-pointer flex justify-between items-center group"
                 >
                   <div>
-                    <p className="font-semibold text-[#1a1a1a]">{loc.name}</p>
-                    <p className="text-sm text-[#6b5a3e]">{loc.address}</p>
+                    <p className="font-bold text-[#111] group-hover:text-[#F7F2E4]" style={{ fontFamily: 'var(--font-oswald)', fontSize: '15px', letterSpacing: '0.08em', textTransform: 'uppercase' }}>{loc.name}</p>
+                    <p className="text-sm text-[#555] group-hover:text-[#aaa]">{loc.address}</p>
                   </div>
-                  <span className="text-[#6b5a3e] text-lg">→</span>
+                  <span className="text-[#C41E3A] group-hover:text-[#C41E3A] text-lg font-bold">→</span>
                 </a>
               ))}
             </div>

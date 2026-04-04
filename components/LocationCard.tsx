@@ -16,31 +16,44 @@ interface LocationCardProps {
 
 export default function LocationCard({ name, address, city, phone, hours, image }: LocationCardProps) {
   return (
-    <div className="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm">
-      {/* Image or placeholder */}
-      <div className="relative w-full h-72 bg-gray-100">
+    <div className="bg-[#F7F2E4] border-2 border-[#111] overflow-hidden">
+      {/* Image */}
+      <div className="relative w-full h-64 bg-[#222]">
         {image ? (
           <Image src={image} alt={name} fill className="object-cover object-center" />
         ) : (
           <div className="w-full h-full flex items-center justify-center">
-            <span className="text-gray-400 text-sm font-medium tracking-wide uppercase">Coming Soon</span>
+            <span style={{ fontFamily: 'var(--font-oswald)', fontSize: '12px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#555' }}>
+              Coming Soon
+            </span>
           </div>
         )}
+        {/* Red label overlay */}
+        <div className="absolute bottom-0 left-0 right-0 bg-[#C41E3A] px-4 py-2">
+          <span style={{ fontFamily: 'var(--font-oswald)', fontSize: '14px', letterSpacing: '0.18em', textTransform: 'uppercase', color: '#F7F2E4', fontWeight: 600 }}>
+            {name}
+          </span>
+        </div>
       </div>
+
       <div className="p-6">
-        <h3 className="text-lg font-bold text-[#2C2C2C] mb-1">{name}</h3>
-        <p className="text-gray-500 text-sm">{address}</p>
-        <p className="text-gray-500 text-sm mb-3">{city}</p>
+        <p style={{ fontFamily: 'var(--font-oswald)', fontSize: '13px', color: '#444', letterSpacing: '0.04em' }}>{address}</p>
+        <p style={{ fontFamily: 'var(--font-oswald)', fontSize: '13px', color: '#444', letterSpacing: '0.04em' }} className="mb-3">{city}</p>
         <a
           href={`tel:${phone.replace(/\D/g, '')}`}
-          className="text-[#6B9B6B] text-sm font-medium hover:underline block mb-4"
+          className="text-[#C41E3A] hover:text-[#A01830] transition-colors font-bold block mb-4"
+          style={{ fontFamily: 'var(--font-oswald)', fontSize: '14px', letterSpacing: '0.08em' }}
         >
           {phone}
         </a>
-        <div className="border-t border-gray-100 pt-4">
-          <p className="text-xs font-semibold text-[#2C2C2C] uppercase tracking-wide mb-2">Hours</p>
+
+        {/* Hours */}
+        <div className="border-t-2 border-[#111] pt-4">
+          <p style={{ fontFamily: 'var(--font-oswald)', fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#111', fontWeight: 600 }} className="mb-3">
+            Hours
+          </p>
           {hours.map((h) => (
-            <div key={h.days} className="flex justify-between text-sm text-gray-500 mb-1">
+            <div key={h.days} className="flex justify-between mb-1" style={{ fontFamily: 'var(--font-oswald)', fontSize: '13px', color: '#555', letterSpacing: '0.04em' }}>
               <span>{h.days}</span>
               <span>{h.time}</span>
             </div>
