@@ -55,10 +55,7 @@ export default function Navbar() {
         <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
 
           {/* Brand */}
-          <Link href="/" className="flex items-center gap-2 text-[#F7F2E4] hover:text-[#C41E3A] transition-colors" style={{ fontFamily: 'var(--font-oswald)', fontSize: '15px', letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 600 }}>
-            <svg width="15" height="19" viewBox="0 0 15 19" fill="currentColor" fillRule="evenodd" aria-hidden="true">
-              <path d="M1 2 Q1 1 2 1 L13 1 Q14 1 14 2 L14 17 Q14 18 13 18 L2 18 Q1 18 1 17 Z M7 5.5 A2 2 0 1 0 3 5.5 A2 2 0 1 0 7 5.5 Z M12.5 9 A1.8 1.8 0 1 0 8.9 9 A1.8 1.8 0 1 0 12.5 9 Z M6 13.5 A1.4 1.4 0 1 0 3.2 13.5 A1.4 1.4 0 1 0 6 13.5 Z"/>
-            </svg>
+          <Link href="/" className="text-[#F7F2E4] hover:text-[#C41E3A] transition-colors" style={{ fontFamily: 'var(--font-oswald)', fontSize: '15px', letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 600 }}>
             The Paper Bag Deli
           </Link>
 
