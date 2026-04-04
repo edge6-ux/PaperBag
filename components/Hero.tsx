@@ -87,7 +87,7 @@ export default function Hero() {
             className="mb-6 px-2 sm:px-0"
             style={{ fontFamily: 'var(--font-oswald)', fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(247,242,228,0.5)' }}
           >
-            Gainesville&apos;s finest sandwiches — made from scratch every morning
+            Changing Lives - One Sandwich at a Time
           </p>
 
           {/* Bottom double rule */}
