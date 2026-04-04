@@ -55,7 +55,7 @@ export default function Navbar() {
         <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
 
           {/* Brand */}
-          <Link href="/" className="text-[#F7F2E4] hover:text-[#C41E3A] transition-colors" style={{ fontFamily: 'var(--font-oswald)', fontSize: '15px', letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 600 }}>
+          <Link href="/" className="text-[#F7F2E4] hover:text-[#C41E3A] transition-colors" style={{ fontFamily: 'var(--font-playfair)', fontSize: '17px', fontWeight: 700, letterSpacing: '0.04em' }}>
             The Paper Bag Deli
           </Link>
 
