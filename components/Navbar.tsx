@@ -68,7 +68,7 @@ export default function Navbar() {
             ))}
             <button
               onClick={() => setOrderOpen(true)}
-              className="bg-[#C41E3A] text-[#F7F2E4] pl-5 pr-8 py-[14px] hover:bg-[#A01830] transition-all duration-200 text-[12px] tracking-widest uppercase font-bold self-stretch flex items-center"
+              className="bg-[#C41E3A] text-[#F7F2E4] pl-5 pr-5 py-[14px] hover:bg-[#A01830] transition-all duration-200 text-[12px] tracking-widest uppercase font-bold self-stretch flex items-center"
               style={{ fontFamily: 'var(--font-oswald)' }}
             >
               Order Online
